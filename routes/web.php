@@ -20,3 +20,7 @@ Route::get('foo-bar', function() {
 });
 
 Route::get('/collect', 'CollectController@collect');
+
+Route::get('/dashboard', 'DashboardController@index')->middleware('auth');
+
+Auth::routes(['register' => false]);
