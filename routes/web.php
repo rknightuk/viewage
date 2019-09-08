@@ -22,5 +22,9 @@ Route::get('foo-bar', function() {
 Route::get('/collect', 'CollectController@collect');
 
 Route::get('/dashboard', 'DashboardController@index')->middleware('auth');
+Route::get('/sites', 'SiteController@index')->middleware('auth');
+Route::get('/sites/new', 'SiteController@new')->middleware('auth');
+Route::post('/sites/new', 'SiteController@store')->middleware('auth');
+Route::get('/sites/{siteId}', 'SiteController@show')->middleware('auth');
 
 Auth::routes(['register' => false]);

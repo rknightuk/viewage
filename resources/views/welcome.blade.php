@@ -62,21 +62,6 @@
                 margin-bottom: 30px;
             }
         </style>
-
-        <script>
-            (function(f, a, t, h, o, m){
-                a[h]=a[h]||function(){
-                    (a[h].q=a[h].q||[]).push(arguments)
-                };
-                o=f.createElement('script'),
-                m=f.getElementsByTagName('script')[0];
-                o.async=1; o.src=t; o.id='viewage-script';
-                m.parentNode.insertBefore(o,m)
-            })(document, window, 'http://viewage.test:8000/tracker.js', 'viewage');
-            viewage('set', 'siteId', '12345');
-            viewage('trackPageview');
-        </script>
-
     </head>
     <body>
         <div class="flex-center position-ref full-height">
