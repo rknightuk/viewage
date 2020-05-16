@@ -10,8 +10,6 @@ class CollectController extends Controller
     {
     	$input = request()->input();
 
-    	info(print_r($input, true));
-
     	$view = new PageView([
     		'site_id' => $input['sid'],
 		    'path' => $input['p'],
