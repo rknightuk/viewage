@@ -80,7 +80,7 @@
 			req = a;
 		}
 
-		let path = vars.path || ( req.pathname + req.search );
+		let path = vars.path || req.pathname.replace(/\/$/, "");
 		if(!path) {
 			path = '/';
 		}
