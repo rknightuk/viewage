@@ -40,6 +40,7 @@ class SiteController extends Controller
     	if (is_null($site)) throw new NotFoundHttpException();
 
     	$views = DB::table('page_views')
+            ->where('site_id', $site->key)
 		    ->select('path', DB::raw('count(*) as total'))
 		    ->groupBy('path')
 		    ->orderBy('total', 'desc')
