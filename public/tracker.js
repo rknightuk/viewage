@@ -80,7 +80,7 @@
 			req = a;
 		}
 
-		let path = vars.path || req.pathname.replace(/\/$/, "");
+		let path = vars.path || req.pathname.replace('/index.html', '').replace(/\/$/, "");
 		if(!path) {
 			path = '/';
 		}
